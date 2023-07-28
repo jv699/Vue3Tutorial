@@ -10,8 +10,19 @@
     <h1>Hello Vue</h1>
     
     <div id="app">
-        <!-- <h2>I am th template, too.</h2> -->
-        <p>{{ title }} - {{ author }} - {{ age }}</p>
+        <div v-if="bShowBooks">
+            <p>{{ title }} - {{ author }} - {{ age }}</p>
+        </div>
+
+        <button @click="toggleShowBooks">
+            <span v-if="bShowBooks">Hide Books</span>
+            <span v-else>Show Books</span>
+        </button>
+
+        <div v-show="bShowBooks">Currently showing books</div>
+
+        <br>
+        <br>
 
         <!-- @ and v-on mean the same thing. after colon is what type of event -->
         <button v-on:click="age++">Increase Age By 1</button>
