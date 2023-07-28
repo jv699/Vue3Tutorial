@@ -12,6 +12,12 @@
     <div id="app">
         <!-- <h2>I am th template, too.</h2> -->
         <p>{{ title }} - {{ author }} - {{ age }}</p>
+
+        <!-- @ and v-on mean the same thing. after colon is what type of event -->
+        <button v-on:click="age++">Increase Age By 1</button>
+        <button v-on:click="age--">Decrease Age By 1</button>
+
+        <div @click="changeTitle('Oathbinger')">Change book title</div>
     </div>
 
     <script src="app.js"></script>
