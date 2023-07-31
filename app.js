@@ -1,3 +1,4 @@
+// Vue as an element
 const app = Vue.createApp({
     //this object is the 'root component'. data and function that react
     // template: '<h2>I am a template</h2>' // this will be injected into the browser               
